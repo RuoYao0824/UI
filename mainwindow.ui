@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(1, 0, 17);</string>
+   <string notr="true">background-color: rgb(1, 100, 17);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="title">
@@ -32,7 +32,7 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -120,7 +120,7 @@ border:none;</string>
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="Quit_btn">
         <property name="styleSheet">
          <string notr="true">border:none</string>
         </property>
@@ -141,6 +141,18 @@ border:none;</string>
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>30</y>
+      <width>951</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
  </widget>
