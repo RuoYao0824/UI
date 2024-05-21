@@ -20,7 +20,16 @@ public:
 private slots:
     void quit();
 
+
+
+    void on_pushButton_Home_clicked();
+
+    void on_pushButton_Tag_clicked();
+
 private:
     Ui::MainWindow *ui;
+    int Home;
+    int Tag;
+    int Page;
 };
 #endif // MAINWINDOW_H
