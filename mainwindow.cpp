@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     Home = 0;
     Tag = 1;
     ui->setupUi(this);
+    
     QObject::connect(ui->Quit_btn, &QPushButton::clicked, this, &MainWindow::quit);
     ui->stackedWidget->setCurrentIndex(Home);
 }

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(1, 100, 17);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="title">
@@ -22,7 +22,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>81</width>
+      <width>111</width>
       <height>654</height>
      </rect>
     </property>
@@ -37,7 +37,7 @@
       <rect>
        <x>0</x>
        <y>20</y>
-       <width>81</width>
+       <width>101</width>
        <height>631</height>
       </rect>
      </property>
@@ -60,8 +60,8 @@ border:none;</string>
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>45</width>
+          <height>45</height>
          </size>
         </property>
        </widget>
@@ -80,8 +80,8 @@ border:none;</string>
         </property>
         <property name="iconSize">
          <size>
-          <width>35</width>
-          <height>35</height>
+          <width>45</width>
+          <height>45</height>
          </size>
         </property>
        </widget>
@@ -100,8 +100,8 @@ border:none;</string>
         </property>
         <property name="iconSize">
          <size>
-          <width>35</width>
-          <height>35</height>
+          <width>45</width>
+          <height>45</height>
          </size>
         </property>
        </widget>
@@ -133,8 +133,8 @@ border:none;</string>
         </property>
         <property name="iconSize">
          <size>
-          <width>35</width>
-          <height>35</height>
+          <width>45</width>
+          <height>45</height>
          </size>
         </property>
        </widget>
@@ -145,9 +145,9 @@ border:none;</string>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>120</x>
       <y>30</y>
-      <width>951</width>
+      <width>921</width>
       <height>621</height>
      </rect>
     </property>
@@ -191,6 +191,32 @@ border:none;</string>
       </property>
      </widget>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>520</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(57, 57, 57);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/icons/images/icons/cil-plus.png</normaloff>:/icons/images/icons/cil-plus.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
    </widget>
   </widget>
  </widget>

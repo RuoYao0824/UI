@@ -1,4 +1,5 @@
 #ifndef MAINWINDOW_H
+class MainWindow;
 #define MAINWINDOW_H
 
 #include <QMainWindow>
@@ -16,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    Ui::MainWindow *ui;
 
 private slots:
     void quit();
@@ -27,7 +29,6 @@ private slots:
     void on_pushButton_Tag_clicked();
 
 private:
-    Ui::MainWindow *ui;
     int Home;
     int Tag;
     int Page;
