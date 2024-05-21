@@ -13,6 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
     
     QObject::connect(ui->Quit_btn, &QPushButton::clicked, this, &MainWindow::quit);
     ui->stackedWidget->setCurrentIndex(Home);
+
+
+    QFile file(":/style/style.qss");
+    if(!file.open(QIODevice::ReadOnly)){
+        qDebug() << "Cannot read the file.";
+    }
+    QString st = file.readAll();
+    setStyleSheet(st);
+    file.close();
 }
 
 MainWindow::~MainWindow()
