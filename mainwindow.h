@@ -4,6 +4,7 @@ class MainWindow;
 
 #include <QMainWindow>
 #include <QFile>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,16 +23,18 @@ public:
 
 private slots:
     void quit();
-
-
+    
+    void add();
 
     void on_pushButton_Home_clicked();
 
     void on_pushButton_Tag_clicked();
 
+
 private:
     int Home;
     int Tag;
     int Page;
+    QString readFile(QString path);
 };
 #endif // MAINWINDOW_H

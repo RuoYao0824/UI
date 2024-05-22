@@ -10,18 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     Home = 0;
     Tag = 1;
     ui->setupUi(this);
-    
+    setStyleSheet(readFile(":/style/style.qss"));
     QObject::connect(ui->Quit_btn, &QPushButton::clicked, this, &MainWindow::quit);
+    QObject::connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::add);
     ui->stackedWidget->setCurrentIndex(Home);
-
-
-    QFile file(":/style/style.qss");
-    if(!file.open(QIODevice::ReadOnly)){
-        qDebug() << "Cannot read the file.";
-    }
-    QString st = file.readAll();
-    setStyleSheet(st);
-    file.close();
 }
 
 MainWindow::~MainWindow()
@@ -54,5 +46,29 @@ void MainWindow::on_pushButton_Home_clicked()
 void MainWindow::on_pushButton_Tag_clicked()
 {
     ui->stackedWidget->setCurrentIndex(Tag);
+}
+
+void MainWindow::add()
+{
+    QString file  = "tasks.txt";
+    QFile t(file);
+    if(!t.open(QIODevice::WriteOnly | QIODevice::Append)){
+        qDebug() << "cannot not open file";
+        return;
+    }
+    QTextStream out(&t);
+    QString information = "tasks information";
+    out << information << "\n";
+    t.close();
+}
+QString MainWindow::readFile(QString path)
+{
+    QFile file(path);
+    if(!file.open(QIODevice::ReadOnly)){
+        qDebug() << "Cannot read the file.";
+    }
+    QString st = file.readAll();
+    file.close();
+    return st;
 }
 

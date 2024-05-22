@@ -1,3 +1,6 @@
 QPushButton{
     border:none;
 }
+MainWindow{
+    background-color: #ff5e0086;
+}
